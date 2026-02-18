@@ -28,7 +28,6 @@ RUN  apt-get update && apt-get install --fix-missing -y \
     nginx \
     fcgiwrap \
     git \
-    git-lfs \
     gpg \
     jq \
     make \
@@ -63,6 +62,7 @@ RUN ./install.sh helm && \
     ./install.sh codegen-go-tools && \
     ./install.sh lint-tools && \
     ./install.sh gotestsum && \
+    ./install.sh git-lfs && \
     go install github.com/mattn/goreman@latest && \
     go install github.com/kisielk/godepgraph@latest && \
     go install github.com/jstemmer/go-junit-report@latest && \
